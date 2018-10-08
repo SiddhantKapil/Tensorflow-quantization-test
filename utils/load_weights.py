@@ -17,6 +17,5 @@ def weight_loader(weight_file):
         g = f[layer_name]
         for weight_name in g.attrs['weight_names']:
             weight_value = g[weight_name].value
-            name = str(weight_name).split("'")[1]
-            weights[name] = weight_value
+            weights[weight_name] = weight_value
     return weights
